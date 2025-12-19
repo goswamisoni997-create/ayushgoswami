@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ayush's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="pic/logo.jpg" class="logo" alt="Logo">
+            </div>
+        
+            <div class="marquee-container">
+                <p class="marquee-text">Welcome to My Digital World! 🚀 | Explore & Connect!</p>
+            </div>
+        
+            <ul class="nav-links">
+                <li><a href="#home"><strong>Home</strong></a></li>
+                <li><a href="#about"><strong>About Me</strong></a></li>
+                <li><a href="#work"><strong>Portfolio</strong></a></li>
+                <li><a href="#contact"><strong>Contact</strong></a></li>
+            </ul>
+        </div>
+         </nav>
+        
+    </nav>
+
+    <section id="home" class="home-container section-container">
+        <div class="image-container">
+            <img src="pic/ayush.jpeg" style="width: 300px;height: 345px;" alt="Profile Picture">
+        </div>
+        <div class="box-container">
+            <h3>Welcome to my Digital World!</h3><br>
+            <p>Hi, I’m Ayush Goswami, a passionate Computer Engineering student exploring the intersection of technology and creativity.This space is a reflection of my journey and interests.
+
+                Feel free to explore and learn more about me! 😊</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-container section-container hidden">
+        <div class="about-box">
+            <h3>About Me</h3><br>
+            <p>I am currently pursuing my degree in Computer Engineering at Fr. Conceicao Rodrigues College of Engineering. As an 19-year-old first-year student, I am passionate about technology and always eager to learn and grow in this field.<br><br>
+
+                Beyond academics, I enjoy playing outdoor sports like cricket and football, traveling to new places, and spending quality time with my loved ones. These hobbies help me stay inspired, creative, and connected to the world around me.</p>
+        </div>
+        <div class="collage-container">
+            <img src="pic/collage.jpg" alt="Collage Image">
+        </div>
+    </section>
+
+    <section id="work" class="work-container section-container hidden">
+        <div class="work-box">
+            <h3>My Work</h3><br>
+            <p>Throughout my academic journey, I have worked on various projects, assignments, and creative designs, constantly learning and improving my skills. Here are some highlights:<br><br>
+
+                🖥️ <strong>Python Mini-Project</strong>: Developed a festival-themed website using Python, HTML, and CSS.<br><br>
+            
+                🎨 <strong>Canva Presentations</strong></strongCanva>: Designed visually appealing presentations and vision boards for academic and personal projects.<br><br>
+                💡 <strong>Bit and Build Hackathon</strong>: Participated in my college’s Bit and Build Hackathon, collaborating with a team to create innovative solutions.<br><br>
+                💡<strong>IDT Project</strong> : As part of my Innovation & Design Thinking (IDT) project, I worked on a Homeamde food delivery app through the Mumbais's famous Dabbawalas.</p>
+        </div>
+        <div class="work-image">
+            <img src="pic/vb.jpg" alt="My Work">
+        </div>
+    </section>
+
+    <section id="contact" class="contact-container section-container hidden">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Me</h3><br>
+                
+                <p><i class="fas fa-envelope"></i> goswamisoni997@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 9987445066</p>
+                <p><i class="fas fa-map-marker-alt"></i> "Runwal Garden Dombivli(E)</p><br>
+                
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        
+            <div class="contact-form">
+                <h3> Do Get in Touch!</h3><br>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section-container");
+            const navLinks = document.querySelectorAll(".nav-links a");
+            sections.forEach(section => section.classList.add("hidden"));
+            document.querySelector("#home").classList.remove("hidden");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    sections.forEach(section => section.classList.add("hidden"));
+                    document.getElementById(targetId).classList.remove("hidden");
+                });
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+        
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+        
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth"
+                });
+            });
+        });
+        
+
+        </script>
+        
+        
+                
+        
+</body>
+</html>
