@@ -10,7 +10,7 @@
 /* Body styling */
 /* Body styling with background image */
 body {
-    background: url('pic/tech2.jpeg') no-repeat center center fixed;
+    background: url('tech2.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     text-align: center;
